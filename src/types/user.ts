@@ -4,18 +4,17 @@ export interface UserState {
     error: null | string;
 }
 
-interface FetchUserAction {
-    type: "FETCH_USERS";
+interface fetchUsersAction {
+    type: "FETCH_USERS"
 }
-interface FetchUserSuccessAction {
+interface fetchUsersSuccessAction {
     type: "FETCH_USERS_SUCCESS";
     payload: any[];
+
 }
-interface FetchUserErrorAction {
+interface fetchUsersErrorAction {
     type: "FETCH_USERS_ERROR";
-    payload: string;
+    payload: null | string;
 }
 
-export type UserAction = FetchUserAction | FetchUserSuccessAction | FetchUserErrorAction
-
-
+export type UserAction = fetchUsersAction | fetchUsersSuccessAction | fetchUsersErrorAction
