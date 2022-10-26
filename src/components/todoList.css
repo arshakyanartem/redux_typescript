@@ -1,0 +1,16 @@
+.pagesWrap {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+}
+
+.page {
+    padding: 10px;
+    margin-right: 10px;
+    border: solid 2px grey;
+    cursor: pointer;
+}
+.page.active {
+    padding: 10px;
+    border: solid 3px black;
+}

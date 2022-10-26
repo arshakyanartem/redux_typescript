@@ -10,11 +10,11 @@ const initialState: TodoState = {
 
 export const todoReducer = (state = initialState, action: TodoAction): TodoState => {
     switch (action.type) {
-        case "FETCH_TODO":
+        case "FETCH_TODOS":
             return {...state, loading: true}
-        case "FETCH_TODO_SUCCESS":
+        case "FETCH_TODOS_SUCCESS":
             return {...state, loading: false, todos: action.payload}
-        case "FETCH_TODO_ERROR":
+        case "FETCH_TODOS_ERROR":
             return {...state, loading: false, error: action.payload}
         case "SET_TODO_PAGE":
             return {...state, page: action.payload}

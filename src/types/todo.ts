@@ -6,21 +6,21 @@ export interface TodoState {
     limit: number;
 }
 
-interface FetchTodoAction {
-    type: "FETCH_TODO"
+interface fetchTodoAction {
+    type: "FETCH_TODOS";
 }
-interface FetchTodoSuccessAction {
-    type: "FETCH_TODO_SUCCESS"
+interface fetchTodoSuccessAction {
+    type: "FETCH_TODOS_SUCCESS";
     payload: any[];
 }
-interface FetchTodoErrorAction {
-    type: "FETCH_TODO_ERROR"
+interface fetchTodoErrorAction {
+    type: "FETCH_TODOS_ERROR";
     payload: string;
 }
-interface SetTodoPage {
-    type: "SET_TODO_PAGE"
+
+interface setTodoPage {
+    type: "SET_TODO_PAGE";
     payload: number;
 }
 
-export type TodoAction = FetchTodoAction | FetchTodoSuccessAction | FetchTodoErrorAction | SetTodoPage
-
+export type TodoAction = fetchTodoAction | fetchTodoSuccessAction | fetchTodoErrorAction | setTodoPage

@@ -1,5 +1,5 @@
-import {Dispatch} from "redux";
 import {UserAction} from "../../types/user";
+import {Dispatch} from "redux";
 import axios from "axios";
 
 export const fetchUsers = () => {
@@ -8,11 +8,11 @@ export const fetchUsers = () => {
             dispatch({type: "FETCH_USERS"})
             const response = await axios.get('https://jsonplaceholder.typicode.com/users')
             setTimeout(() => {
-                dispatch(({type: "FETCH_USERS_SUCCESS", payload: response.data}))
+                dispatch({type: "FETCH_USERS_SUCCESS", payload: response.data})
             }, 1000)
         }
         catch (e) {
-            dispatch({type: "FETCH_USERS_ERROR", payload: "You have an error!"})
+            dispatch({type: "FETCH_USERS_ERROR", payload: "You have an error in fetch users!"})
         }
     }
 }

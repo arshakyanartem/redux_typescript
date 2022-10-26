@@ -3,7 +3,7 @@ import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import {fetchUsers} from "../store/action-creators/user";
 
-const UserList: React.FC = () => {
+const UserList = () => {
     const {users, loading, error} = useTypedSelector(state => state.userReducer)
     const dispatch = useDispatch()
     useEffect(() => {

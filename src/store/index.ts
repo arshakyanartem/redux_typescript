@@ -11,3 +11,4 @@ const rootReducer = combineReducers({
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk))
 
 export type RootState = ReturnType<typeof rootReducer>
+

@@ -11,11 +11,10 @@ export const userReducer = (state = initialState, action: UserAction): UserState
         case "FETCH_USERS":
             return {users: [], loading: true, error: null}
         case "FETCH_USERS_SUCCESS":
-            return {users: action.payload, loading: false, error: null}
+            return {users: action.payload, error: null, loading: false}
         case "FETCH_USERS_ERROR":
             return {users: [], loading: false, error: action.payload}
         default:
             return state
     }
 }
-
