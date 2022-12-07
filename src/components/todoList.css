@@ -14,3 +14,10 @@
     padding: 10px;
     border: solid 3px black;
 }
+
+.todoList__input {
+    margin-bottom: 5px;
+    width: 50%;
+    padding: 5px;
+    border: solid 1px dimgray;
+}

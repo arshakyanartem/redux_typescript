@@ -14,13 +14,15 @@ const UserList = () => {
         return <h2>Loading...</h2>
     }
     if (error) {
-        return <h2>You have an error!</h2>
+        return <h2>You have an error in fetch Users!</h2>
     }
     return (
         <div>
             {
                 users.map(item =>
-                    <div key={item.id}>{item.name}</div>
+                    <div key={item.id}>
+                        {item.name}
+                    </div>
                 )
             }
         </div>

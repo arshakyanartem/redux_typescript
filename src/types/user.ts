@@ -11,6 +11,7 @@ interface fetchUserSuccessAction {
     type: "FETCH_USERS_SUCCESS";
     payload: any[];
 }
+
 interface fetchUserErrorAction {
     type: "FETCH_USERS_ERROR";
     payload: string;
